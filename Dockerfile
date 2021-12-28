@@ -21,7 +21,7 @@ WORKDIR /Maximus/
 # Fork/Clone maintainers may change the clone URL to match
 # the location of their repository. [#ThatsHerokuForYa!]
 RUN if [ ! -d /Maximus/.git ] ; then \
-    git clone "https://github.com/noobanon/Maximus.git" /tmp/dirty/Maximus/ && \
+    git clone "https://github.com/Denvilxe/Maximus.git" /tmp/dirty/Maximus/ && \
     mv -v -u /tmp/dirty/Maximus/.git /Maximus/ && \
     rm -rf /tmp/dirty/Maximus/; \
     fi
