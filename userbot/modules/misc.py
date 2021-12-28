@@ -148,10 +148,10 @@ async def randomise(e):
 
 @register(outgoing=True, pattern="^.alive$")
 async def alive(a):
-    reply_msg = f"**[Maximus](https://github.com/noobanon/Maximus)**\n"
+    reply_msg = f"**[AnieUb](https://github.com/Anieteam)**\n"
     reply_msg += f"`Status : Alive`\n"
     reply_msg += f"`Made By ❤ Using` @TelethonUpdates\n"
-    photo = "https://telegra.ph/file/66cdc2a48c85419a03e93.jpg"
+    photo = "https://telegra.ph/file/89983f4c15bdac6998093.jpg"
     await a.delete()
     await bot.send_file(a.chat.id, photo, caption=reply_msg)
 
@@ -202,13 +202,13 @@ async def bot_support(e):
 @register(outgoing=True, pattern="^.repo$")
 async def repo_is_here(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit(" **Take This Pro Repo** [REPO](https://github.com/noobanon/Maximus)")
+        await e.edit(" **Take This Pro Repo** [REPO](https://github.com/Anieteam/Aniebots)")
 
 
 @register(outgoing=True, pattern="^.supportchannel$")
 async def support_channel(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("https://t.me/TheBotSupports")
+        await e.edit("https://t.me/Aniebotsupports")
 
 
 @register(outgoing=True, pattern="^.userid$")
