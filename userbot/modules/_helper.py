@@ -1,7 +1,7 @@
   
 from telethon import functions
 
-from userbot import ALIVE_NAME, CMD_LIST
+from userbot import ALIVE_NAME, CMD_HELP
 from userbot.utils import admin_cmd
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "godhacker"
@@ -21,9 +21,9 @@ async def cmd_list(event):
         input_str = event.pattern_match.group(1)
         if tgbotusername is None or input_str == "text":
             string = ""
-            for i in CMD_LIST:
+            for i in CMD_HELP:
                 string += "⚡️" + i + "\n"
-                for iter_list in CMD_LIST[i]:
+                for iter_list in CMD_HELP[i]:
                     string += "    `" + str(iter_list) + "`"
                     string += "\n"
                 string += "\n"
@@ -42,7 +42,7 @@ async def cmd_list(event):
             else:
                 await event.edit(string)
         elif input_str:
-            if input_str in CMD_LIST:
+            if input_str in CMD_HELP:
                 string = "Commands found in {}:".format(input_str)
                 for i in CMD_LIST[input_str]:
                     string += "    " + i
